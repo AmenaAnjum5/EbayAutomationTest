@@ -23,13 +23,12 @@ public class HomePage extends TestBase {
 	
 	//WebElement logo= driver.findElement(By.id("gh-logo"));
 	@FindBy(id="gh-logo")
-	static WebElement logo;
+	public WebElement logo;
 	
 	@FindBy(linkText="Motors")
-	public static WebElement motors;
+	public WebElement motors;
 	
 	@FindBy(linkText="Cars & Trucks")
-	static
 	WebElement carsAndTrucks;
 	
 	//initialize pageObjects
@@ -39,11 +38,11 @@ public class HomePage extends TestBase {
 	
 	
 	//Actions
-	public static String validateTitle() {
+	public String validateTitle() {
 		return driver.getTitle();
 	}
 	
-	public static boolean validateLogo() {
+	public boolean validateLogo() {
 		return logo.isDisplayed();
 	}
 	
@@ -52,7 +51,7 @@ public class HomePage extends TestBase {
 		searchButton.click();
 	}
 	
-	public static void selectCarsAndTrucks() {
+	public void selectCarsAndTrucks() {
 		Actions action = new Actions(driver);
 		action.moveToElement(motors);
 		action.build().perform();
