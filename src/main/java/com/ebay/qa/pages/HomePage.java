@@ -2,6 +2,7 @@ package com.ebay.qa.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,6 +25,13 @@ public class HomePage extends TestBase {
 	@FindBy(id="gh-logo")
 	static WebElement logo;
 	
+	@FindBy(linkText="Motors")
+	public static WebElement motors;
+	
+	@FindBy(linkText="Cars & Trucks")
+	static
+	WebElement carsAndTrucks;
+	
 	//initialize pageObjects
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -43,6 +51,15 @@ public class HomePage extends TestBase {
 		searchField.sendKeys("phones");
 		searchButton.click();
 	}
+	
+	public static void selectCarsAndTrucks() {
+		Actions action = new Actions(driver);
+		action.moveToElement(motors);
+		action.build().perform();
+		carsAndTrucks.click();
+	}
+	
+	
 	
 		
 }
