@@ -26,17 +26,17 @@ public class HomePageTestcases extends TestBase {
 		homepage= new HomePage();
 	}
 	
-//	@Test(priority=1)
-//	public void homepageTitleTest() {
-//		String title= HomePage.validateTitle();
-//		Assert.assertEquals(title, "Electronics, Cars, Fashion, Collectibles & More | eBay");
-//	}
-//	
-//	@Test(priority=2)
-//	public void homepageLogoTest() {
-//		boolean flag= HomePage.validateLogo();
-//		Assert.assertTrue(flag);
-//	}
+	@Test(priority=1)
+	public void homepageTitleTest() {
+		String title= HomePage.validateTitle();
+		Assert.assertEquals(title, "Electronics, Cars, Fashion, Collectibles & More | eBay");
+	}
+	
+	@Test(priority=2)
+	public void homepageLogoTest() {
+		boolean flag= HomePage.validateLogo();
+		Assert.assertTrue(flag);
+	}
 	
 	@Test(priority=3)
 	public void launchCarsAndMotors() {
